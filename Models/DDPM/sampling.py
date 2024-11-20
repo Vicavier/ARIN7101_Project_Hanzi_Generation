@@ -23,8 +23,8 @@ if __name__=="__main__":
     device = "cpu" if args.cpu else "cuda"
     CONDITIONAL = True if args.conditional else False
     ckpt_path = "./saves/conditional.pt" if CONDITIONAL else "./checkpoint/unconditional_model.pt"
-    # SPECIFIC_NUMBER_LIST = torch.full((args.n_samples,), args.number).to(device) if CONDITIONAL else None
-    SPECIFIC_NUMBER_LIST = torch.tensor([0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8]).to(device) if CONDITIONAL else None
+    SPECIFIC_NUMBER_LIST = torch.full((args.n_samples,), args.number).to(device) if CONDITIONAL else None
+    # SPECIFIC_NUMBER_LIST = torch.tensor([0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,6,6,6,6,6,6,6,6,6,7,7,7,7,7,7,7,7,7,8,8,8,8,8,8,8,8,8]).to(device) if CONDITIONAL else None
     SAMPLE_NUM = args.n_samples
 
     print("loading...")

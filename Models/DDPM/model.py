@@ -50,7 +50,7 @@ class Diffuser(nn.Module):
             x_t = self._reverse_diffusion_with_clip(x_t, t, noise, l)
             # if(i % 20 == 0):
             #     img_tensor = (x_t + 1.) / 2.
-            #     save_image(img_tensor, f'./sampling_progress/step_{i}.png', nrow=3)
+            #     save_image(img_tensor, f'./sampling_progress/step_{i}.png', nrow=9)
 
         x_t=(x_t + 1.) / 2. #[-1,1] to [0,1]
         
